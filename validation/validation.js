@@ -18,3 +18,17 @@
         }, false)
       })
   })()
+
+
+  var input = document.querySelector("#counflag");
+  
+  intlTelInput(input, {
+    initialCountry: "IN",
+    customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+      validationCustom03.setAttribute("placeholder",selectedCountryPlaceholder)
+      console.log(selectedCountryPlaceholder)
+      console.log(selectedCountryData)
+      document.querySelector("#councode").innerHTML= "<h6 style='color:#fff'>+"+selectedCountryData.dialCode+"</h6>";
+      return "e.g. " + selectedCountryPlaceholder;
+    },
+  });
