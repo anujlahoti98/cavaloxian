@@ -1,0 +1,33 @@
+@mixin inputs {
+    background-color: rgb(56, 54, 54);
+    border: transparent;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+#three
+{
+    border:  black;
+    height:385px;
+    background-color:  black;    
+}
+.form-label
+{
+    color: white;
+}
+.form-control
+{
+    @include inputs();    
+}
+.form-select
+{
+    @include inputs();
+    color:white;
+    
+}
+.container
+{
+    margin-left: 500px;
+}
